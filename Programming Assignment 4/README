@@ -1,0 +1,22 @@
+index.c
+模擬演算法並輸出結果
+
+graph.py
+模擬演算法並繪製圖表
+--------------------------------------------
+執行流程(index.c):
+
+設定測試參數
+#define request_num 1001
+#define cylinders 5000
+#define initial 2500
+#define run_times 10
+
+編譯程式
+clang index.c -o index
+
+執行程式
+./index
+
+執行流程(graph.py):
+python index.py

@@ -1,0 +1,23 @@
+主要檔案有
+kernel: proc.c proc.h
+test: test.c index.c
+
+How to use?
+cd /usr/src/minix/kernel
+將kernel內的proc.c與proc.h取代原本在/usr/src/minix/kernel內的proc.c與proc.h
+cd /usr/src/minix
+make clean
+cd kernel
+make clean
+make kernel
+cp /usr/sbin/kernel /boot/minix_latest/kernel
+reboot
+select 2.
+
+How to test?
+cd /usr/src/minix
+將test內的index.c與test.c放入minix檔案中
+clang test.c -o test
+clang index.c -o index
+接著使用SSH連接minix並輸入top
+./index
